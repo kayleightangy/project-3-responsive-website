@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        /* --- GENERAL STYLES --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header, main, footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+
+        /* --- NAVIGATION STYLES --- */
+        nav {
+            background-color: #2c3e50;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 0;
+        }
+
+        .nav-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a:focus {
+            background-color: #34495e;
+        }
+
+        .nav-menu a.active {
+            background-color: #3498db;
+        }
+
+        /* --- PAGE NAVIGATION (Previous/Next) --- */
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+
+        .page-navigation a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .page-navigation a:hover,
+        .page-navigation a:focus {
+            background-color: #2980b9;
+        }
+
+        .page-navigation .next {
+            margin-left: auto;
+        }
+
+        /* --- LANDMARK PAGE STYLES --- */
+        .landmark-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .landmark-content {
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* --- REQUIREMENT 1: RESPONSIVE PICTURE ELEMENT --- 
+           This handles the "Featured Image" that changes based on screen width.
+        */
+        .hero-section {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+
+        /* --- REQUIREMENT 2: THE IMAGE GRID --- 
+           This satisfies the "uniform grid of images" requirement.
+        */
+        .gallery-grid {
+            display: grid;
+            /* This creates a responsive grid that autofills columns */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        figure {
+            margin: 0;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 0.5rem;
+            transition: transform 0.2s;
+            height: 100%; /* ensures cards are same height */
+            box-sizing: border-box;
+        }
+
+        figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Ensuring images stay inside the figure and maintain aspect ratio */
+        figure img {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Forces the image to be square */
+            object-fit: cover;   /* Crops the image to fit the square */
+            display: block;
+            border-radius: 2px;
+        }
+
+        figcaption {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+        }
+
+        figcaption em, figcaption a {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.2rem;
+            font-style: normal;
+            text-decoration: none;
+        }
+
+        figcaption a:hover {
+            text-decoration: underline;
+            color: #2c3e50;
+        }
+
+        /* --- REQUIREMENT 3: RESPONSIVE VIDEO --- 
+           This makes the embedded video resize proportionally.
+        */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            color: #777;
+        }
+
+        /* --- MEDIA QUERIES FOR RESPONSIVE DESIGN --- */
+        @media screen and (max-width: 768px) {
+            header, main, footer, .nav-container {
+                padding: 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+            }
+
+            .nav-menu a {
+                padding: 0.75rem;
+            }
+
+            .page-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .page-navigation a {
+                text-align: center;
+            }
+
+            .page-navigation .next {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-section h2 {
+                font-size: 1.4rem;
+            }
+        }

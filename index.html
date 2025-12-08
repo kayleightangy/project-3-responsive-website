@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Landmarks Virtual Tour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NYC Landmarks Virtual Tour</h1>
+        <p>This site highlights some interesting landmarks across New York City's five boroughs.</p>
+        <p>New York City is filled with landmarks, tourist attractions and historic sites dating from before it was known as New York City to more recent additions. Click through this site to explore!</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="statue-of-liberty.html">Statue of Liberty</a></li>
+                <li><a href="empire-state-building.html">Empire State Building</a></li>
+                <li><a href="staten-island-ferry.html">Staten Island Ferry</a></li>
+                <li><a href="wonder-wheel.html">Wonder Wheel</a></li>
+                <li><a href="yankee-stadium.html">Yankee Stadium</a></li>
+                <li><a href="roosevelt-island-tramway.html">Roosevelt Island Tramway</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- REQUIREMENT: Featured Image using <picture> -->
+        <section class="hero-section">
+            <h2>Featured Landmark: The Wonder Wheel</h2>
+            <p>The Wonder Wheel is the iconic ferris wheel at Deno’s Wonder Wheel Amusement Park in Coney Island, Brooklyn. Standing 150 feet tall, it has been a centerpiece of the boardwalk skyline since its debut in 1920.</p>
+            <p>Coney Island has been a hub of seaside amusement for more than a century, known for its thrilling rides, bright lights, and summertime energy. From the historic Cyclone roller coaster to modern attractions, it remains one of New York City’s most beloved destinations for fun by the beach.</p>
+            
+            <picture>
+                <!-- 
+                   1. Small Screen: Shows a cropped close-up (You'll need to create this crop from the main image)
+                   2. Large Screen: Shows the full landscape view
+                -->
+                <source media="(max-width: 600px)" srcset="images/pexels-kelsey-caroline-774981359-19122990.jpg">
+                <!-- I've updated this to point to the Wonder Wheel file you provided, but remember this is the "Large" view -->
+                <img src="images/pexels-kelsey-caroline-774981359-19122990.jpg" alt="The Wonder Wheel at Coney Island" class="hero-image">
+            </picture>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 2rem 0;">
+
+        <!-- REQUIREMENT: Grid of Images with Figure/Figcaption -->
+        <section>
+            <h2>NYC Landmarks Gallery</h2>
+            <div class="gallery-grid">
+                
+                <!-- Image 1: Statue of Liberty -->
+                <figure>
+                    <img src="images/square/pexels-mora-versio-2150673251-34091093_sq_square.jpg" alt="Statue of Liberty">
+                    <figcaption>
+                        Statue of Liberty
+                        <a href="statue-of-liberty.html">View details</a>
+                        <a href="https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/" target="_blank">Photo by Mora Versio</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Image 2: Empire State Building -->
+                <figure>
+                    <img src="images/square/pexels-tracehudson-2424391_sq_square.jpg" alt="Empire State Building with lower Manhattan in the background">
+                    <figcaption>
+                        Empire State Building with lower Manhattan in the background
+                        <a href="empire-state-building.html">View details</a>
+                        <a href="https://www.pexels.com/photo/empire-state-building-2424391/" target="_blank">Photo by Trace Hudson</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Image 3: Staten Island Ferry -->
+                <figure>
+                    <img src="images/square/praswin-prakashan-YOCN1a1m_dg-unsplash_sq_square.jpg" alt="Staten Island Ferry pulling into the dock">
+                    <figcaption>
+                        Staten Island Ferry pulling into the dock
+                        <a href="staten-island-ferry.html">View details</a>
+                        <a href="https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg" target="_blank">Photo by Praswin Prakashan</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Image 4: Wonder Wheel -->
+                <figure>
+                    <img src="images/square/pexels-kelsey-caroline-774981359-19122990_sq_square.jpg" alt="Wonder Wheel ferris wheel at Coney Island">
+                    <figcaption>
+                        Wonder Wheel ferris wheel at Coney Island
+                        <a href="wonder-wheel.html">View details</a>
+                        <a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/" target="_blank">Photo by Kelsey Caroline</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Image 5: Yankee Stadium -->
+                <figure>
+                    <img src="images/square/pexels-malcolmhill-12360516_sq_square.jpg" alt="Yankee Stadium">
+                    <figcaption>
+                        Yankee Stadium
+                        <a href="yankee-stadium.html">View details</a>
+                        <a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/" target="_blank">Photo by Malcolm Hill</a>
+                    </figcaption>
+                </figure>
+
+                <!-- Image 6: Roosevelt Island Tramway -->
+                <figure>
+                    <img src="images/square/pexels-loquellano-12404963_sq_square.jpg" alt="Roosevelt Island Tramway leaving Manhattan">
+                    <figcaption>
+                        Roosevelt Island Tramway leaving Manhattan
+                        <a href="roosevelt-island-tramway.html">View details</a>
+                        <a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/" target="_blank">Photo by Raphael Loquellano</a>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 2rem 0;">
+
+        <!-- REQUIREMENT: Responsive Video -->
+        <section>
+            <h2>NYC Video Tour</h2>
+            <div class="video-wrapper">
+                <!-- Example YouTube Video set to a NYC tour video placeholder -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MtCMtC50gwY?si=placeholder" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site by Kayleigh</p>
+    </footer>
+</body>
+</html>
