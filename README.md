@@ -54,14 +54,5 @@ All images used in this project are from free stock photo sites with proper attr
 
 This site is deployed using GitHub Pages:
 
-- Repository: https://github.com/kayleightangy/project-2
-- Live Site: https://kayleightangy.github.io/project-2/
-
-## Requirements Fulfilled
-
-✅ Created a set of images that are all the same aspect ratio (square)
-✅ Left the originals untouched
-✅ Added images to index.html using figure, img and figcaption elements
-✅ Added CSS to make images into a grid
-✅ Added a featured image using the picture element that shows one image on large screens and a cropped version on small screens
-✅ Added a responsive video to the page
+- Repository: https://github.com/kayleightangy/project-3-responsive-website
+- Live Site: https://kayleightangy.github.io/project-3-responsive-website
